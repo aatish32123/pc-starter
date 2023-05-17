@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+pro&family=pacifico&family=source+sans+pro:wght@200&display=swap');
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: maven pro;
+}
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #28282b;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 600px;
+    height: 600px;
+
+}
+.container i{
+    position: absolute;
+    inset: 0;
+    border: none;
+    transition: 0.5s;
+    animation: no 5s linear infinite;
+
+}
+.container i:nth-child(1)
+{
+    border-radius: 8% 92% 7% 93% / 91% 10% 90% 9%;
+    animation: animate 10s linear infinite;
+}
+.container i :nth-child(2)
+{
+    border-radius:  86% 14% 86% 14% /14% 80% 20% 86% ;
+    animation: animate 10s linear infinite;
+}
+.containeri:nth-child(3)
+{
+    border-radius: 51% 49% 58% 42% / 46% 47% 53% 54%;
+    animation: animate 10s linear infinite; 
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.container:hover i
+{
+    border: 10px solid var(--clr);
+    filter: drop-shadow(10px 10px 20px var(--clr));
+}
+.container .form
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    width: 300px;
+    height: 100px;
+    gap: 20px;
+}
+.container .form h3
+{
+    font-size: 3em;
+    color: #fff;
+}
+.container .form .box input
+{
+    position: relative;
+    width: 200px;
+    padding: 12px 20px;
+    background: transparent;
+    border: 3px solid #fff;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2em;
+    box-shadow: none;
+    outline: none;
+}
+.container .form .box input[ type="submit"]
+{
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg,#2193b0,#6dd5ed);
+}
+.container .form .box input[type="submit"]:hover
+{
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(200deg,#2193b0,#6dd5ed);
+}
+.container .form .link
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    padding: 0 20px;
+}
+.container .form .link a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+
